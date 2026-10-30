@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roblox Login</title>
+<style>
+body {
+  background: #e5e5e5;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+.box {
+  background: white;
+  padding: 35px;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+}
+input, button {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 13px;
+  margin-top: 12px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+}
+button {
+  background: #222;
+  color: white;
+  cursor: pointer;
+}
+#result {
+  display: none;
+  margin-top: 20px;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+<div class="box">
+  <h1>ROBLOX</h1>
+  <h3>Prank Login 😂</h3>
+  <p>Gib einen Fake-Benutzernamen ein!</p>
+
+  <input id="username"
+  placeholder="Fake-Benutzername">
+
+  <button onclick="prank()">Weiter</button>
+
+  <div id="result"></div>
+</div>
+
+<script>
+function prank() {
+  const name = document.getElementById("username").value;
+  if (!name.trim()) return;
+
+  document.getElementById("result").style.display = "block";
+  document.getElementById("result").innerHTML =
+    "😂 ERWISCHT!<br><br>" +
+    "Dein eingegebener Fake-Name: " +
+    name + "<br><br>Dein Account ist sicher!";
+}
+</script>
+</body>
+</html>
